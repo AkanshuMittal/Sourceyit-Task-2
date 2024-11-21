@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body onload="checkAuthentication()">
+    <div class="dashboard-container">
+        <!--sidebar-->
+        <aside class="dashboard-sidebar">
+            <div class="dashboard-sidebar-header">
+                <h1>CRUD OPERATIONS</h1>
+            </div>
+            <div class="dashboard-profile">
+                <img src="/images3.jpeg" alt="admin">
+                <h2>Akanshu Mittal</h2>
+                <p>Admin</p>
+            </div>
+            <nav>
+                <ul class="dashboard-sidebar-menu">
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-home sidebar-icon"></i><span>Home</span></a></li>
+                    <li><a href="students.html"><i class="fas fa-user-graduate sidebar-icon"></i><span>Students</span></a></li>
+                    <li><a href="payments.html"><i class="fas fa-wallet sidebar-icon"></i><span>Payments</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar sidebar-icon"></i><span>Report</span></a></li>
+                    <li><a href="#"><i class="fas fa-cog sidebar-icon"></i><span>Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt sidebar-icon"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <!--Main Dashboard Content-->
+        <main class="dashboard-main-content">
+            <!-- Header with search bar and notification icon-->
+            <header>
+            <h1>Dashboard</h1>
+            <div class="header-icons">
+                <input type="text" class="payment-search-box" placeholder="Search...">
+            <div class="notification-icon" onclick="toggleNotification()">&#x1F514</div>
+            </div>
+            </header>
+            <!--Overview Cards Section-->
+            <section class="cards">
+            <div class="card" style="background-color: #e0f7fa;">
+                <div class="card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div class="card-content">
+                        <p>Students</p>
+                        <h3 style="align-self: flex-end;">243</h3>
+                    </div>
+                    </div>
+                    <div class="card" style="background-color: #fce4ec;">
+                        <div class="card-icon">
+                            <i class="fas fa-bookmark icon-custom"></i>
+                        </div>
+                        <div class="card-content">
+                            <p>Course</p></div>
+                    <div class="number">
+                            <h3>13</h3>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: #fff9c4;">
+                    <div class="card-icon">
+                        <i class="fas fa-dollar-sign icon"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Payments</p></div>
+                       <div class="number">
+                        <h3>INR 245,000</h3>
+                    </div>
+                    </div>
+                    <div class="card" style="background-color: #ffe0b2;">
+                        <div class="card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    <div class="card-content">
+                    <p>Users</p></div>
+                    <div class="number">
+                        <h3>3</h3>
+                    </div>
+                 </div>
+            </section>  
+        </main>
+    </div>
+
+    <!--External JavaScript-->
+    <script src="script.js"></script>
+</body>
+</html>
